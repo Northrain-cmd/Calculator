@@ -188,6 +188,8 @@ document.addEventListener('keyup',function(e){
                             document.getElementById("minus").style.backgroundColor="";
                         }
                         else if(e.key== 'Backspace'){
+                            e.stopPropagation();
+                            e.preventDefault();
                             display.value="";
                             operator='';
                             a=0;
