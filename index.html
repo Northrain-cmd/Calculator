@@ -9,49 +9,49 @@
     <body>
         <div id="wrapper">
             <div id="display">
-                <form>
-                    <input id='calcDisp' type="number" name="displayCalc">
+                <form id="disp" onSubmit="return false">
+                    <input id='calcDisp' type="text" maxlength="12" placeholder="0" readonly name="displayCalc">
                 </form>
                 
                     
                 </div>
-                <div id="seven" class="button">
+                <div id="seven" class="button number">
                     <button id="7">7</button>
 
                 </div>
-                <div id="eight" class="button">
+                <div id="eight" class="button number">
                     <button id="8">8</button>
 
                 </div>
-                <div id="nine" class="button">
+                <div id="nine" class="button number">
                     <button id="9">9</button>
 
                 </div>
-                <div id="four" class="button">
+                <div id="four" class="button number">
                     <button id="4">4</button>
 
                 </div>
-                <div id="five" class="button">
+                <div id="five" class="button number">
                     <button id="5">5</button>
 
                 </div>
-                <div id="six" class="button">
+                <div id="six" class="button number">
                     <button id="6">6</button>
 
                 </div>
-                <div id="one" class="button">
+                <div id="one" class="button number">
                     <button id="1">1</button>
 
                 </div>
-                <div id="two" class="button">
+                <div id="two" class="button number">
                     <button id="2">2</button>
 
                 </div>
-                <div id="three" class="button">
+                <div id="three" class="button number">
                     <button id="3">3</button>
 
                 </div>
-                <div id="zero" class="button">
+                <div id="zero" class="button number">
                     <button id="0">0</button>
 
                 </div>
@@ -67,32 +67,32 @@
                     <button id="clear"></button>
 
                 </div>
-                <div id="factorial" class="button">
-                    <button id="fact"></button>
+                <div id="factorial" class="button operator" data-value="fact" data-name="fact">
+                    <button class="ops" id="fact"></button>
 
                 </div>
-                <div id="pow" class="button">
-                    <button id="power"></button>
+                <div id="pow" class="button operator" data-value="pow">
+                    <button class="ops" id="power"></button>
 
                 </div>
-                <div id="sqr" class="button">
-                    <button id="sqrt"></button>
+                <div id="sqr" class="button operator" data-value="sqrt" data-name="square">
+                    <button class="ops" id="sqrt"></button>
 
                 </div>
-                <div id="div" class="button">
-                    <button id="division"></button>
+                <div id="div" class="button operator" data-value="div">
+                    <button class="ops" id="division"></button>
 
                 </div>
-                <div id="multiply" class="button">
-                    <button id="mult"></button>
+                <div id="multiply" class="button operator" data-value="mult">
+                    <button class="ops" id="mult"></button>
 
                 </div>
-                <div id="min" class="button">
-                    <button id="minus"></button>
+                <div id="min" class="button operator" data-value="minus" data-name="min">
+                    <button class="ops" id="minus"></button>
 
                 </div>
-                <div id="pls" class="button">
-                    <button id="plus"></button>
+                <div id="pls" class="button operator" data-value="plus">
+                    <button class="ops" id="plus"></button>
 
                 </div>
             </div>

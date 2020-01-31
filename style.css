@@ -21,6 +21,7 @@ html, body {
     height: 95vh;
     margin-left:30%;
     margin-top: 1%;
+    border:1px ridge #465881;
 background-color: white;
 display: grid;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
@@ -41,6 +42,9 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
+button::-moz-focus-inner{
+  border: 0;
+}
 input[type=number] { 
   -moz-appearance: textfield;
   appearance: textfield;
@@ -55,8 +59,9 @@ input[type=number] {
     font-style: normal;
     font-weight: normal;
     font-size: 70px;
-    text-align: center;
+    text-align: right;
     color: #1F1F1F;
+    overflow:scroll;
 }
 .button button{
     width: 100%;
@@ -113,9 +118,10 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
    background-size: 70%;
    background-position: center;
    background-color: #1F1F1F;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  
 
   }
+  #plus:hover{background-color: #85203b;}
   #min{
       grid-area: min;
   }
@@ -125,8 +131,8 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
    background-size: 70%;
    background-position: center;
    background-color: #1F1F1F;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   }
+  #minus:hover{background-color: #85203b;}
   #multiply{
     grid-area: multiply;  
   }
@@ -136,8 +142,8 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
    background-size: 50%;
    background-position: center;
    background-color: #1F1F1F;
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   }
+  #mult:hover{background-color: #85203b;}
   #div{
       grid-area: div;
   }
@@ -147,6 +153,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   background-size: 70%;
   background-position: center;
   background-color: #1F1F1F; }
+  #division:hover{background-color: #85203b;}
   #sqr{
       grid-area:sqr;
   }
@@ -156,7 +163,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   background-size: 70%;
   background-position: center;
   background-color: #1F1F1F; }
-  
+  #sqrt:hover{background-color: #85203b;}
   #factorial{
       grid-area: factorial;
   }
@@ -167,6 +174,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
    background-position: center;
    background-color: #1F1F1F;
   }
+  #fact:hover{background-color: #85203b;}
   #pow{
       grid-area: pow;
   }
@@ -176,7 +184,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   background-size: 40%;
   background-position: center;
   background-color: #1F1F1F; }
-  
+  #power:hover{background-color: #85203b;}
   #clr{
       grid-area: clr;
   }
@@ -187,6 +195,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   background-position: center;
   background-color: #1F1F1F;
   }
+  #clear:hover{background-color: #85203b;}
   #equal{
     background-image: url("Images/equal.svg");
     background-repeat: no-repeat;
@@ -194,3 +203,23 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
     background-position: center;
     background-color: #FF5C00;
   }
+  input::placeholder {
+    font-family: 'Play',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 70px;
+    text-align: right;
+    color: #1F1F1F; 
+    }
+    ::-moz-placeholder {
+      opacity: 1;
+    }
+    button:active {
+      padding: 0px;
+    }
+    button:focus{
+      background-color: #85203b;
+    }
+    button:hover{
+      background-color: #85203b;
+    }
