@@ -81,7 +81,7 @@ operators.forEach(item=>{
             item.style.backgroundColor="#85203b";
             a=display.value;
             operator=item.getAttribute("data-value");
-            display.value=operate(operator,Number(a),0).toFixed(6);
+            display.value=operate(operator,Number(a),0);
             display.setAttribute("placeholder",'');
             operator=item.getAttribute("data-value");
         })
@@ -124,6 +124,10 @@ equal.addEventListener('click',function(){
         }
         else{
     display.value=Number(operate(operator,Number(a),Number(b)).toFixed(4));}}
+                            document.getElementById("division").style.backgroundColor="";
+                            document.getElementById("mult").style.backgroundColor="";
+                            document.getElementById("plus").style.backgroundColor="";
+                            document.getElementById("minus").style.backgroundColor="";
 })
 const dot=document.getElementById("comma");
 comma.addEventListener('click',()=>{
@@ -178,6 +182,10 @@ document.addEventListener('keyup',function(e){
                             console.log(b);
                             console.log(operator);
                             display.value=Number(operate(operator,Number(a),Number(b)).toFixed(4));
+                            document.getElementById("division").style.backgroundColor="";
+                            document.getElementById("mult").style.backgroundColor="";
+                            document.getElementById("plus").style.backgroundColor="";
+                            document.getElementById("minus").style.backgroundColor="";
                         }
                         else if(e.key== 'Backspace'){
                             display.value="";
@@ -185,16 +193,41 @@ document.addEventListener('keyup',function(e){
                             a=0;
                             b=0;
                             display.setAttribute("placeholder",'0');
+                            document.getElementById("division").style.backgroundColor="";
+                            document.getElementById("mult").style.backgroundColor="";
+                            document.getElementById("plus").style.backgroundColor="";
+                            document.getElementById("minus").style.backgroundColor="";
+                        }
+                        else if(e.key== '.'){
+                            display.value+=".";
                         }
 
 })
 const clear=document.getElementById("clear");
-clear.addEventListener('click',(e)=>{
-    e.stopPropagation();
-    e.preventDefault();
+clear.addEventListener('mouseup',(e)=>{
     display.value="";
     operator='';
     a=0;
     b=0;
     display.setAttribute("placeholder",'0');
+    document.getElementById("division").style.backgroundColor="";
+    document.getElementById("mult").style.backgroundColor="";
+    document.getElementById("plus").style.backgroundColor="";
+    document.getElementById("minus").style.backgroundColor="";
 })
+
+document.getElementById("division").addEventListener('mouseover',(item)=>{
+    item.style.backgroundColor="#1F1F1F";
+})
+document.getElementById("mult").addEventListener('mouseover',(item)=>{
+    item.style.backgroundColor="#1F1F1F";
+})
+document.getElementById("plus").addEventListener('mouseover',(item)=>{
+    item.style.backgroundColor="#1F1F1F"
+})
+document.getElementById("minus").addEventListener('mouseover',(item)=>{
+    item.style.backgroundColor="#1F1F1F"
+})
+    
+
+    

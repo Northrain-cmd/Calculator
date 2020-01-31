@@ -16,15 +16,22 @@ html, body {
 
     background-color: #E5E5E5;
 }
+#allWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  width:100vw;
+}
 #wrapper{
     width: 37%;
     height: 95vh;
-    margin-left:30%;
     margin-top: 1%;
-    border:1px ridge #465881;
+    border:2px ridge #465881;
 background-color: white;
 display: grid;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr ;
+grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-template-areas:    '   display       display       display     display     '
                         '   seven          eight         nine           pls     '
                         '   four            five          six           min     '
@@ -217,9 +224,41 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
     button:active {
       padding: 0px;
     }
-    button:focus{
-      background-color: #85203b;
-    }
     button:hover{
       background-color: #85203b;
     }
+@media only screen  and (max-width:900px){
+  #wrapper{
+    width: 80%;
+    padding: 0;
+    margin:0;
+    height: 95vh;
+    margin-top: 1%;
+    align-self: center;
+    justify-self: center;
+}
+#allWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height:100vh;
+  width:100vw;
+}
+.button button{
+  background-size: 60%;
+  height: 100%;
+}
+#clear{
+  background-size: 80%;
+}
+#fact{
+  background-size: 80%;
+}
+#power{
+    background-size: 80%;
+  
+}
+#sqrt{
+  background-size: 80%;
+}
+}
