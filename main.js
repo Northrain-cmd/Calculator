@@ -1,3 +1,7 @@
+const buttons=document.querySelectorAll(".button");
+    buttons.forEach(button =>{
+    button.classList.add("disable-dbl-zoom");
+})
 let operator;
 let a;
 function add(a,b){

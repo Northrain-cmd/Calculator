@@ -28,10 +28,10 @@ html, body {
     width: 37%;
     height: 95vh;
     margin-top: 1%;
-    border:2px ridge #465881;
+    border:.1em ridge #465881;
 background-color: white;
 display: grid;
-grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
 grid-template-columns: 1fr 1fr 1fr 1fr;
 grid-template-areas:    '   display       display       display     display     '
                         '   seven          eight         nine           pls     '
@@ -44,6 +44,9 @@ grid-template-areas:    '   display       display       display     display     
     grid-area: display;
     
     
+}
+.disable-dbl-zoom{
+  touch-action: manipulation;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -58,11 +61,19 @@ input[type=number] {
   appearance: textfield;
   margin: 0; 
 }
+#disp{
+  max-width:100%;
+}
+input{
+  width:100%;
+}
+#display{
+  max-width:100%;
+}
 #calcDisp{
-    height: 20vh;
-    width: 99%;
+    height: inherit;
+    max-width: 100%;
     background: #B3CCD2;
-    border: 2px solid #465881;
     font-family: 'Play',sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -228,15 +239,15 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
     button:hover{
       background-color:#1F1F1F ;
     }
-@media screen and (max-width:1200){
+    @media screen and (max-width:900){
   button:hover{
     background-color: none;
   }
   #wrapper{
-    width: 90vw;
+    width: 80vw;
     padding: 0;
     margin:0;
-    height: 70vh;
+    height: 50vh;
     align-self: center;
     justify-self: center;
 }
