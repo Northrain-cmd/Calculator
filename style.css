@@ -1,20 +1,12 @@
-html {
-    width:100vw;
-    height: 100vh;
-    display: table;
-}
 
 body {
     width:100vw;
     height:100vh;
-    display:table-cell;
 }
 
 html, body {
     margin: 0px;
     padding: 0px;
-
-
     background-color: #E5E5E5;
 }
 #allWrapper{
@@ -25,11 +17,9 @@ html, body {
   width:100vw;
 }
 #wrapper{
-    width: 37%;
-    height: 95vh;
-    margin-top: 1%;
-    border:.1em ridge #465881;
-background-color: white;
+    width: 37vw;
+    height: 85vh;
+   /* border:.1em ridge #465881;*/
 display: grid;
 grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr;
 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -62,22 +52,22 @@ input[type=number] {
   margin: 0; 
 }
 #disp{
-  max-width:100%;
+  width:37vw;
 }
 input{
-  width:100%;
+  width:37vw;
 }
 #display{
-  max-width:100%;
+  width:37vw;
 }
 #calcDisp{
     height: inherit;
-    max-width: 100%;
+    width: 37vw;
     background: #B3CCD2;
     font-family: 'Play',sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
+    font-size: 4em;
     text-align: right;
     color: #1F1F1F;
     overflow:scroll;
@@ -90,7 +80,7 @@ border: 2px solid #465881;
 font-family: 'Play';
 font-style: normal;
 font-weight: normal;
-font-size: 70px;
+font-size: 4em;
 text-align: center;
 color: #00909E;
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
@@ -226,7 +216,7 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
     font-family: 'Play',sans-serif;
     font-style: normal;
     font-weight: normal;
-    font-size: 70px;
+    font-size: 1.2em;
     text-align: right;
     color: #1F1F1F; 
     }
@@ -239,17 +229,19 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
     button:hover{
       background-color:#1F1F1F ;
     }
-    @media screen and (max-width:900){
-  button:hover{
+    @media screen and (max-width:900px){
+  .button button:hover{
     background-color: none;
   }
   #wrapper{
     width: 80vw;
     padding: 0;
     margin:0;
-    height: 50vh;
+    height: 65vh;
     align-self: center;
     justify-self: center;
+    margin:20% auto;
+    grid-template-rows: 1fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
 }
 #allWrapper{
   display: flex;
@@ -259,23 +251,20 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
   width:100vw;
 }
 #clear{
-  background-size: 100%;
+ min-height: 80px;
+ background-size: contain;
 }
 #fact{
-  background-size: 100%;
+  background-size: contain;
 }
 #power{
-    background-size: 100%;
-  
+  background-size: contain;
 }
 #sqrt{
-  background-size: 100%;
+  background-size: contain;
 }
-#display{min-width:100%;}
-}
-
-@media screen and (max-width:600px){
-#wrapper{
-width:80vw ;
-}
-}
+#display{width:80vw;}
+#calcDisp{width:80vw;}
+.ops button{
+  background-size: contain;
+}}
